@@ -1,0 +1,45 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+
+// Pass off to GameScript to get and use AP
+IF
+CharacterUsedSkill(_Char, "Target_HeavyAttack", _, _)
+THEN
+SetStoryEvent(_Char, "AIB_FIND_AP");
+
+IF
+StoryEvent((CHARACTERGUID)_Char, "AIB_FOUND_AP")
+THEN
+ObjectSetFlag(_Char, "ALLIN");
+
+// Replace the damage with amount based on AP used
+IF
+NRD_OnPrepareHit(_, (CHARACTERGUID)_Source, _, _HitHandle)
+AND
+ObjectGetFlag(_Source, "ALLIN", 1)
+AND
+AIB_ClearFlag(_Source)
+AND
+GetVarInteger(_Source, "AIB_AP", _AP)
+AND
+DB_AIB_DamageTypes(_DamageType)
+AND
+NRD_HitGetDamage(_HitHandle, _DamageType, _Damage)
+AND
+IntegerProduct(_Damage, _AP, _NewDamage)
+THEN
+NRD_HitClearDamage(_HitHandle, _DamageType);
+NRD_HitAddDamage(_HitHandle, _DamageType, _NewDamage);
+
+QRY
+AIB_ClearFlag((CHARACTERGUID)_Source)
+THEN
+ObjectClearFlag(_Source, "ALLIN");
+
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "__Start"

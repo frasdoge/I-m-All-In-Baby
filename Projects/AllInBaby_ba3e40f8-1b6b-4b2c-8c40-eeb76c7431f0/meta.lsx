@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" />
+    <version major="3" minor="6" revision="6" build="0" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="Module" value="ba3e40f8-1b6b-4b2c-8c40-eeb76c7431f0" type="23" />
+            <attribute id="Name" value="AllInBaby" type="23" />
+            <attribute id="Type" value="Add-on" type="23" />
+            <attribute id="UUID" value="285b6c68-360d-4de8-8156-34525fd93282" type="23" />
+        </node>
+    </region>
+</save>
