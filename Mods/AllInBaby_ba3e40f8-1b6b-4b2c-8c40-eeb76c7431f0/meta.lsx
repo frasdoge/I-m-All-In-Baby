@@ -9,7 +9,7 @@
                     <children>
                         <node id="ModuleShortDesc">
                             <attribute id="Folder" value="DivinityOrigins_1301db3d-1f54-4e98-9be5-5094030916e4" type="30" />
-                            <attribute id="MD5" value="" type="23" />
+                            <attribute id="MD5" value="8c08a78e11b3c02215cdf0982d8c0981" type="23" />
                             <attribute id="Name" value="Divinity: Original Sin 2" type="22" />
                             <attribute id="UUID" value="1301db3d-1f54-4e98-9be5-5094030916e4" type="22" />
                             <attribute id="Version" value="372645092" type="4" />
@@ -34,29 +34,12 @@
                     <attribute id="Tags" value="" type="30" />
                     <attribute id="Type" value="Add-on" type="22" />
                     <attribute id="UUID" value="ba3e40f8-1b6b-4b2c-8c40-eeb76c7431f0" type="22" />
-                    <attribute id="Version" value="285212672" type="4" />
+                    <attribute id="Version" value="301989888" type="4" />
                     <children>
                         <node id="PublishVersion">
                             <attribute id="Version" value="909321303" type="4" />
                         </node>
-                        <node id="Scripts">
-                            <children>
-                                <node id="Script">
-                                    <attribute id="UUID" value="bd58fd22-052d-4a6e-ab25-1a233ccd1ffa" type="22" />
-                                    <children>
-                                        <node id="Parameters">
-                                            <children>
-                                                <node id="Parameter">
-                                                    <attribute id="MapKey" value="HardcoreOnly" type="22" />
-                                                    <attribute id="Type" value="1" type="4" />
-                                                    <attribute id="Value" value="0" type="23" />
-                                                </node>
-                                            </children>
-                                        </node>
-                                    </children>
-                                </node>
-                            </children>
-                        </node>
+                        <node id="Scripts" />
                         <node id="TargetModes">
                             <children>
                                 <node id="Target">

@@ -2,42 +2,43 @@ Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
 
+DB_AIB_DamageTypes("Physical");
+DB_AIB_DamageTypes("Poison");
+DB_AIB_DamageTypes("Earth");
+DB_AIB_DamageTypes("Fire");
+DB_AIB_DamageTypes("Water");
+DB_AIB_DamageTypes("Air");
+DB_AIB_DamageTypes("Piercing");
+DB_AIB_DamageTypes("Chaos");
+
 KBSECTION
 
-// Pass off to GameScript to get and use AP
 IF
-CharacterUsedSkill(_Char, "Target_HeavyAttack", _, _)
-THEN
-SetStoryEvent(_Char, "AIB_FIND_AP");
-
-IF
-StoryEvent((CHARACTERGUID)_Char, "AIB_FOUND_AP")
-THEN
-ObjectSetFlag(_Char, "ALLIN");
-
-// Replace the damage with amount based on AP used
-IF
-NRD_OnPrepareHit(_, (CHARACTERGUID)_Source, _, _HitHandle)
+NRD_OnHit((GUIDSTRING)_Target, (CHARACTERGUID)_Source, _, (INTEGER64)_StatusHandle)
 AND
-ObjectGetFlag(_Source, "ALLIN", 1)
+NRD_StatusGetString(_Target, _StatusHandle, "SkillId", _Skill)
 AND
-AIB_ClearFlag(_Source)
+StringContains(_Skill, "Target_HeavyAttack", 1)
 AND
-GetVarInteger(_Source, "AIB_AP", _AP)
+NRD_CharacterGetStatInt(_Source, "CurrentAP", _CurrentAP)
+AND
+QryCharacterUseActionPoints(_Source, _CurrentAP)
 AND
 DB_AIB_DamageTypes(_DamageType)
 AND
-NRD_HitGetDamage(_HitHandle, _DamageType, _Damage)
+NRD_HitStatusGetDamage(_Target, _StatusHandle, _DamageType, _Damage)
 AND
-IntegerProduct(_Damage, _AP, _NewDamage)
+IntegerProduct(_Damage, _CurrentAP, _NewDamage)
 THEN
-NRD_HitClearDamage(_HitHandle, _DamageType);
-NRD_HitAddDamage(_HitHandle, _DamageType, _NewDamage);
+NRD_HitStatusClearDamage(_Target, _StatusHandle, _DamageType);
+NRD_HitStatusAddDamage(_Target, _StatusHandle, _DamageType, _NewDamage);
 
 QRY
-AIB_ClearFlag((CHARACTERGUID)_Source)
+QryCharacterUseActionPoints((CHARACTERGUID)_Char, (INTEGER)_AP)
+AND
+IntegerProduct(_AP, -1, _UseAP)
 THEN
-ObjectClearFlag(_Source, "ALLIN");
+CharacterAddActionPoints(_Char, _UseAP);
 
 EXITSECTION
 
