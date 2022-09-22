@@ -1,9 +1,9 @@
 <contentList>
-	<content contentuid="hf0f9034ag2034g46dcg9e51gd1e21835d606" Source="Stats_FlurryDodge.lsb" Key="Stats_FlurryDodge">Staggered</content>
-	<content contentuid="h865526fag622dg4941g9bfeg1f8a8a0d3ae6" Source="Status_CONSUME_Description.lsb" Key="FLURRYDODGE_Description">Reduced chance to dodge incoming attacks.</content>
-	<content contentuid="h9eff0c0eg6619g4d15g9a4fgc4421898f0ab" Source="Status_CONSUME_DisplayName.lsb" Key="FLURRYDODGE_DisplayName">Staggered</content>
-	<content contentuid="h0db2aa2cg0e6eg4e49gb48dg7bd272017db6" Source="Target_Description.lsb" Key="Target_DualWieldingAttack_Description">Perform three quick strikes, each dealing [1].</content>
-	<content contentuid="h407ab7d8g5defg4444g94a1g0fb39029beb0" Source="Target_Description.lsb" Key="Target_HeavyAttack_Description">Consume all remaining &lt;font color=&apos;#A8A8A8&apos;&gt;AP&lt;/font&gt; to strike a mighty blow on the target, dealing [1] per &lt;font color=&apos;#A8A8A8&apos;&gt;AP&lt;/font&gt; expended.&lt;br&gt;&lt;br&gt;Attacks made from out of combat register as if &lt;font color=&apos;#A8A8A8&apos;&gt;2 AP&lt;/font&gt; was expended.</content>
-	<content contentuid="h4016f6c7g9a6eg425fg9868g2769b25de6c0" Source="Target_DisplayName.lsb" Key="Target_DualWieldingAttack_DisplayName">Flurry</content>
-	<content contentuid="h44827c6cga5bag4b18gbf6fg57b6cbbbfbfb" Source="Target_DisplayName.lsb" Key="Target_HeavyAttack_DisplayName">All-In</content>
+	<content contentuid="hf0f9034ag2034g46dcg9e51gd1e21835d606" Source="Stats_FlurryDodge.lsb" Key="Stats_FlurryDodge">Ошеломлённый</content>
+	<content contentuid="h865526fag622dg4941g9bfeg1f8a8a0d3ae6" Source="Status_CONSUME_Description.lsb" Key="FLURRYDODGE_Description">Снижение шанса уклониться от вражеских атак.</content>
+	<content contentuid="h9eff0c0eg6619g4d15g9a4fgc4421898f0ab" Source="Status_CONSUME_DisplayName.lsb" Key="FLURRYDODGE_DisplayName">Ошеломлённый</content>
+	<content contentuid="h0db2aa2cg0e6eg4e49gb48dg7bd272017db6" Source="Target_Description.lsb" Key="Target_DualWieldingAttack_Description">Наносите три быстрых удара, каждый из которых наносит [1].</content>
+	<content contentuid="h407ab7d8g5defg4444g94a1g0fb39029beb0" Source="Target_Description.lsb" Key="Target_HeavyAttack_Description">Расходует все оставшиеся &lt;font color=&apos;#A8A8A8&apos;&gt;ОД&lt;/font&gt;, чтобы нанести могучий удар по цели, нанося [1] за &lt;font color=&apos;#A8A8A8&apos;&gt; ОД&lt;/font&gt; потраченное. &lt;br&gt;&lt;br&gt;Атаки, сделанные вне боя, регистрируются так, как если бы &lt;font color=&apos;#A8A8A8&apos;&gt;было потрачено 2 ОД&lt;/font&gt;.</content>
+	<content contentuid="h4016f6c7g9a6eg425fg9868g2769b25de6c0" Source="Target_DisplayName.lsb" Key="Target_DualWieldingAttack_DisplayName">Шквал</content>
+	<content contentuid="h44827c6cga5bag4b18gbf6fg57b6cbbbfbfb" Source="Target_DisplayName.lsb" Key="Target_HeavyAttack_DisplayName">Все сразу</content>
 </contentList>
